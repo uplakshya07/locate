@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Control - Ambikapur</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <form action="" method="POST" id="my-form">
+        <label for="reporter-name">Enter your name: </label><br>
+        <input type="text" name="reporter-name" id="reporter-name"><br>
+
+        <label for="place">Enter the place name where the garbage is thrown: </label><br>
+        <input type="text" name="place" id="place" required><br>
+
+        <label for="accused-person">Enter the name of the person responsible for garbage: </label><br>
+        <input type="text" name="accused-person" id="accused-person"><br>
+
+        <label for="proof">Provide photo(s) and/or video(s) of garbage: </label><br>
+        <input type="file" name="proof" id="proof" multiple accept="image/*, video/*" required><br>
+
+        <span>Enter the location of the place where the garbage is thrown:
+        </span>
+        <label for="urlLocation">Google Map url: </label>
+        <input type="url" name="location" id="urlLocation" required value="">
+
+        <span>OR Use your current location: </span>
+        <input type="button" name="currentLocation" value="Allow location access" id="currentLocation" onclick="getLocation()"><br>
+
+        <label for="reporter-email">Enter your email address: </label><br>
+        <input type="email" name="email" id="reporter-email"><br>
+
+        <label for="mobile">Enter your mobile number: </label><br>
+        <input type="number" name="mobile" id="mobile" required><br>
+
+        <label for="message">Additional details: </label><br>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="demo"></div>
+
+    <div id="status"></div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
